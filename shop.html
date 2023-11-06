@@ -5,33 +5,72 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>WEBSITE</title>
     <style>
-        /* Basic styling for your website */
+         * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
         body {
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
 			background-color:#ab98ba;
         }
+
         header {
             background-color: #333;
             color: #fff;
             text-align: center;
             padding: 1rem;
         }
+
         nav {
             background-color: #444;
             text-align: center;
             padding: 0.5rem;
         }
+
         nav a {
             color: #fff;
             text-decoration: none;
             margin: 0 1rem;
         }
+
         .container {
             padding: 1rem;
         }
-        /* Login form styles */
+		
+
+		.news-ticker {
+             overflow: hidden;
+            }    
+
+
+.news-content {
+    display: inline-block;
+    white-space: nowrap;
+    animation: scroll 30s linear infinite;
+}
+
+.news-item {
+    padding: 10px;
+    display: inline-block;
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+.news-item:hover {
+    background-color: #555;
+    transition: background-color 0.3s;
+}
         .login-container {
             text-align: center;
             margin: 2rem auto;
@@ -42,17 +81,30 @@
             border: 1px solid #ddd;
             padding: 1rem;
         }
-        /* Major topics */
         .major-topics {
             text-align: center;
             margin: 2rem auto;
         }
-        /* Footer styles */
         footer {
             background-color: #333;
             color: #fff;
             text-align: center;
             padding: 1rem;
+        }
+        .flex-container{
+          display: flex;
+          margin: 10px 10px;
+          justify-content: space-around;
+        }
+        .flex-items{
+          height: 100px;
+          width: 100px;
+        }
+        .grid-container{
+          margin-top: 50px;
+          display: flex;
+          justify-content: space-around;
+
         }
     </style>
 </head>
@@ -71,28 +123,46 @@
         <a href="https://agriolms.telangana.gov.in/Default.aspx">State Policies</a>
         <a href="https://www.fert.nic.in/home-page">National Policies</a>
 		<a href="loginfps.html">Login</a>
+        <a href="userregister.html">Registration</a>
     </nav>
+	 <div class="news-ticker"> 
+        <div class="news-content">
+            <span class="news-item">SRI ANJANEYA FERTILIZERS PESTICIDES AND SEEDS</span> 
+             <span class="news-item">SRI ANJANEYA FERTILIZERS PESTICIDES AND SEEDS</span>
+             <span class="news-item">SRI ANJANEYA FERTILIZERS PESTICIDES AND SEEDS</span> 
+             <span class="news-item">SRI ANJANEYA FERTILIZERS PESTICIDES AND SEEDS</span>  
+             <span class="news-item">SRI ANJANEYA FERTILIZERS PESTICIDES AND SEEDS</span>  
+        </div>
     <div class="container">
         <div class="major-topics">
-            <h2>Greetings to you</h2>
-            <p>Thank you for reaching us we hounour to to provide the service to the all Farmers and Dealers of our family.<br>
+            <h1>Greetings to you</h1>
+            <p >Thank you for reaching us we hounour to to provide the service to the all Farmers and Dealers of our family.<br>
 			We spent all the time for the welfare of Farmers in the love and connection towards growth of Agriculture in our area <br>
 			We provide various agriculture equipments and needs</p>
         </div>
-		
-        
-		<h3>Pesticides</h3>
-		<p>Explore our range of pesticides for your farming needs.</p>
-    <a id="anchor1" ><image src="https://sumichem.co.in/images/iphone-img.png" height="300" width="300"></image></a>
-    <h2>Fertilizers</h2>
-            <p>Find the best fertilizers to boost your crop growth.</p>
-    <a id="anchor2"><image src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRgoyhgKknQlATgKqhWbEkY4OHAtzjf8wbT7AESDvipmaKSLMW8xHdoi6LesMTpYtGC_MM&usqp=CAU" height="300" width="300"></image></a>
-    <h2>Seeds</h2>
-            <p>Discover high-quality seeds for your crops.</p>
-           <a id="anchor3"> <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSy_bGQlCYLhkhSV2h7tjjrXlKWnuWh6NzflA&usqp=CAU"height="300" width="300"></image></a>
+		<h1 align="center"> Major Crops in Telangana</h1>
+    <div class="flex-container">
+      <div class="flex-item"><img src="paddy.jpg" alt="" class="flex-image" height="250" width="260"  ></div>
+      <div class="flex-item"><img src="maize.jpeg" alt="" class="flex-image"  height="250" width="260" ></div>
+      <div class="flex-item"><img src="cotton.jpg" alt="" class="flex-image"  height="250" width="260" ></div>
     </div>
+    <div class="grid-container">
+      <div class="grid-item"><h2 >Pesticides</h2>
+        <p>Explore our range of pesticides for your farming needs.</p>
+        <a id="anchor1" ><image src="https://sumichem.co.in/images/iphone-img.png" height="300" width="300"></image></a></div>
+      <div class="grid-item"><h2>Fertilizers</h2>
+        <p>Find the best fertilizers to boost your crop growth.</p>
+           <a id="anchor2"><image src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRgoyhgKknQlATgKqhWbEkY4OHAtzjf8wbT7AESDvipmaKSLMW8xHdoi6LesMTpYtGC_MM&usqp=CAU" height="300" width="300"></image></a></div>
+      <div class="grid-item"><h2>Seeds</h2>
+        <p>Discover high-quality seeds for your crops.</p>
+       <a id="anchor3"> <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSy_bGQlCYLhkhSV2h7tjjrXlKWnuWh6NzflA&usqp=CAU"height="300" width="300"></image></a></div>
+      </div>
+    </div>   
+		
     <footer>
-        <p>&copy; 2023 Your Website. All rights reserved.</p>
+        <p>&copy; 2023    All rights reserved by Sri Anjaneya Fertilizers .</p>
+        <p> contact us : 08711-234132 <br> Email:srianjaneyafps@gmail.com</p>
+        <p> Reach us Directly to Any of the outlet </p>
     </footer>
 </body>
 </html>
